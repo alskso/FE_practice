@@ -22,8 +22,8 @@ jobs:
 
       - name: Set environment variables
         run: |
-          echo: "VITE_ID=${{ secrets.VITE_ID }}" >> .env
-          echo: "VITE_PW=${{ secrets.VITE_PW }}" >> .env
+          echo "VITE_ID=${{ secrets.VITE_ID }}" >> .env
+          echo "VITE_PW=${{ secrets.VITE_PW }}" >> .env
 
       - name: Build project
         run: npm run build --mode production
